@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app-prac';
+  title = 'Angular 16 practice';
+  user = {
+    name: "angular user",
+    hobby: "coding",
+    interest: "UI",
+    known: ["java", "go", "javascript", "typescript", "html", "css"]
+  }
 }
