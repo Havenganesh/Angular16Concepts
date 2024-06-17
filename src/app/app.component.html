@@ -1,2 +1,23 @@
+<mat-toolbar>
+    <span>Angular 16 Tutorials</span>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+</mat-toolbar>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <i class="bi bi-1-square-fill"></i>&nbsp; String Interpolation
+            </mat-panel-title>
+            <mat-panel-description>
+                string interpolstion technique model
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-string-interpolation></app-string-interpolation>
+    </mat-expansion-panel>
+</mat-accordion>
 
-<!-- <app-login></app-login> -->
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+</mat-menu>

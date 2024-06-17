@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,19 +11,24 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PropertyBindingComponent,
-    StringInterpolationComponent
+    StringInterpolationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatExpansionModule,
+    MatMenuModule,
+    MatToolbarModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
@@ -29,9 +36,10 @@ import { StringInterpolationComponent } from './string-interpolation/string-inte
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SideBarComponent,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [SideBarComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

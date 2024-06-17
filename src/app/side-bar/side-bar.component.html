@@ -1,0 +1,14 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+                 (closed)="events.push('close!')">
+                 <button mat-button color="primary" (click)="open()">close</button>
+      
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <p>hi this is content</p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  
+  
